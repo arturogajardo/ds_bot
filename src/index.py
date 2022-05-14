@@ -34,8 +34,6 @@ async def yt(ctx, *, search):
     query_string = parse.urlencode({'search_query': search})
     html_content = request.urlopen('http://www.youtube.com/results?' + query_string)
     search_results = re.findall(r'watch\?v=(\S{11})', html_content.read().decode())
-    #print(search_results)
-    # I will put just the first result, you can loop the response to show more results
     await ctx.send('Toma xuxetumare: https://www.youtube.com/watch?v=' + search_results[0])
 
 #COMANDO BUSCA OP.GG
@@ -90,7 +88,6 @@ async def on_ready():
 @bot.listen()
 async def on_message(message):
     if "hola rene" in message.content.lower():
-        # in this case don't respond with the word "Tutorial" or you will call the on_message event recursively
         await message.channel.send('que pa mi xan')
         await bot.process_commands(message)
 
