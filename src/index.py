@@ -94,7 +94,7 @@ async def on_message(message):
         await message.channel.send('que pa mi xan')
         await bot.process_commands(message)
 
-bot.run('OTc1MDk4MzcxNDM2MDYwNzMy.GRQCbB.8FAo524MQzktBs6NCsWWj7ZXb21ua-S2wqe9P4')
+bot.run('tu-token')
 
 
 
